@@ -83,7 +83,7 @@ export default function Station3(props: any) {
               <>
                 <p className="text-slate-600 mb-4">Calcula la longitud de una circunferencia cuyo <strong>radio es de 5 cm</strong>.</p>
                 <div className="flex gap-2 items-center">
-                  <Input value={ans1} onChange={e => setAns1(e.target.value)} placeholder="31.4" type="number" className="w-32" />
+                  <Input value={ans1} onChange={e => setAns1(e.target.value)} placeholder="" type="number" className="w-32" />
                   <span className="text-slate-500 font-medium">cm</span>
                 </div>
               </>
@@ -111,7 +111,7 @@ export default function Station3(props: any) {
                   <>
                     <p className="text-slate-600 mb-4">Si el <strong>diámetro</strong> de un aro es de 12 cm, calcula su longitud (Pista: primero halla el radio).</p>
                     <div className="flex gap-2 items-center">
-                      <Input value={ans2} onChange={e => setAns2(e.target.value)} placeholder="37.68" type="number" className="w-32" />
+                      <Input value={ans2} onChange={e => setAns2(e.target.value)} placeholder="" type="number" className="w-32" />
                       <span className="text-slate-500 font-medium">cm</span>
                     </div>
                   </>
@@ -141,7 +141,7 @@ export default function Station3(props: any) {
                   <>
                     <p className="text-slate-600 mb-4">Una rueda de bicicleta tiene un radio de 35 cm. ¿Qué distancia recorre la rueda tras dar una vuelta completa?</p>
                     <div className="flex gap-2 items-center">
-                      <Input value={ans3} onChange={e => setAns3(e.target.value)} placeholder="219.8" type="number" className="w-32" />
+                      <Input value={ans3} onChange={e => setAns3(e.target.value)} placeholder="" type="number" className="w-32" />
                       <span className="text-slate-500 font-medium">cm</span>
                     </div>
                   </>
@@ -165,7 +165,7 @@ export default function Station3(props: any) {
                   <br/><span className="text-sm opacity-75">(Pista: Divide la longitud entre 6.28)</span>
                 </p>
                 <div className="flex gap-2 items-center">
-                  <Input value={ans4} onChange={e => setAns4(e.target.value)} type="number" className="w-32" placeholder="Ej: 10" />
+                  <Input value={ans4} onChange={e => setAns4(e.target.value)} type="number" className="w-32" placeholder="" />
                   <span className="text-slate-500 font-medium">cm</span>
                 </div>
               </CardContent>

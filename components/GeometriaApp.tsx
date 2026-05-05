@@ -15,6 +15,7 @@ import Station4 from './stations/Station4';
 import Station5 from './stations/Station5';
 import Station6 from './stations/Station6';
 import Station7 from './stations/Station7';
+import ChatBubble from './ChatBubble';
 
 const STATIONS = [
   { id: 0, title: 'Portada', icon: Book },
@@ -177,6 +178,7 @@ export default function GeometriaApp() {
         </AnimatePresence>
       </div>
       <Calculator />
+      <ChatBubble />
     </div>
   );
 }

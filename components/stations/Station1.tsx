@@ -14,8 +14,8 @@ export default function Station1(props: any) {
   const [ans4, setAns4] = useState('');
 
   const q1Correct = ans1Base === '4' && ans1Altura === '3';
-  const q2Correct = ans2Altura.trim() !== '' && !isNaN(Number(ans2Altura)); // Just need "some" number answer
-  const q3Correct = ans3.toLowerCase().includes('si') || ans3.toLowerCase().includes('sí'); // Accept any string containing "si"
+  const q2Correct = ans2Altura === '5';
+  const q3Correct = ans3.toLowerCase().includes('si') || ans3.toLowerCase().includes('sí');
   const q4Correct = ans4 === '6';
 
   const canComplete = q1Correct && q2Correct && q3Correct && q4Correct;
@@ -50,8 +50,8 @@ export default function Station1(props: any) {
         <CardContent className="p-6 space-y-4">
           <h3 className="font-bold text-lg text-slate-800">Instrucciones:</h3>
           <ul className="list-disc pl-5 space-y-2 text-slate-700">
-            <li><strong>Base:</strong> Es el lado en el que se apoya la figura. Mídelo apoyando el &quot;0&quot; de la regla en un extremo.</li>
-            <li><strong>Altura:</strong> Es la distancia perpendicular desde la base hasta el punto más alto. Para trazarla perfectamente, alinea un cateto de la <strong>escuadra</strong> con la base y deslízala hasta el vértice superior.</li>
+            <li><strong>Base:</strong> Es el lado de referencia sobre el que parece apoyarse la figura, o el lado inferior principal.</li>
+            <li><strong>Altura:</strong> Es la distancia en línea recta perpendicular desde la base hasta el punto más alto, formando siempre un ángulo de 90° con la base.</li>
           </ul>
         </CardContent>
       </Card>
@@ -63,15 +63,15 @@ export default function Station1(props: any) {
               Ejercicio 1
               {q1Correct && <CheckCircle2 className="w-5 h-5 text-emerald-500" />}
             </h4>
-            <p className="text-slate-600 mb-4">En un rectángulo que tiene una <strong>base de 4 cm</strong> y una <strong>altura de 3 cm</strong>, comprueba con tu regla que las medidas son correctas introduciéndolas abajo.</p>
+            <p className="text-slate-600 mb-4">Imagina un rectángulo que tiene una <strong>base de 4 cm</strong> y una <strong>altura de 3 cm</strong>. Introduce estos datos abajo para practicar dónde ubicarlos.</p>
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label className="text-sm font-medium text-slate-500 mb-1 block">Base (cm)</label>
-                <Input value={ans1Base} onChange={e => setAns1Base(e.target.value)} placeholder="4..." type="number" />
+                <Input value={ans1Base} onChange={e => setAns1Base(e.target.value)} placeholder="" type="number" />
               </div>
               <div>
                 <label className="text-sm font-medium text-slate-500 mb-1 block">Altura (cm)</label>
-                <Input value={ans1Altura} onChange={e => setAns1Altura(e.target.value)} placeholder="3..." type="number" />
+                <Input value={ans1Altura} onChange={e => setAns1Altura(e.target.value)} placeholder="" type="number" />
               </div>
             </div>
           </CardContent>
@@ -85,8 +85,11 @@ export default function Station1(props: any) {
                   Ejercicio 2 (Avanzado)
                   {q2Correct && <CheckCircle2 className="w-5 h-5 text-emerald-500" />}
                 </h4>
-                <p className="text-slate-600 mb-4">Imaginate un romboide. Identifica su base y, usando la escuadra, traza su altura desde un vértice. ¿Cuántos centímetros mide en tu mente o en tu papel?</p>
-                <Input value={ans2Altura} onChange={e => setAns2Altura(e.target.value)} placeholder="Ej: 5" type="number" />
+                <p className="text-slate-600 mb-4">Observa un romboide en tu mente. Recuerda que los lados inclinados exteriores NO son la altura. Si un romboide tiene una base de 10 cm, un lado exterior de 6 cm y una distancia recta interior (su altura) de 5 cm, ¿qué número representa su altura real?</p>
+                <div className="flex gap-2 items-center">
+                  <Input value={ans2Altura} onChange={e => setAns2Altura(e.target.value)} placeholder="" type="number" className="w-32" />
+                  <span className="text-slate-500 font-medium">cm</span>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -100,8 +103,8 @@ export default function Station1(props: any) {
                   Ejercicio 3 (Desafío)
                   {q3Correct && <CheckCircle2 className="w-5 h-5 text-emerald-500" />}
                 </h4>
-                <p className="text-slate-600 mb-4">Dibuja un cuadrado de 3 cm de lado. Observa y responde: ¿La altura coincide con uno de sus lados? ¿Por qué?</p>
-                <Input value={ans3} onChange={e => setAns3(e.target.value)} placeholder="Sí, coincide porque..." />
+                <p className="text-slate-600 mb-4">A diferencia del romboide, imagina un <strong>cuadrado</strong>. Ya que los lados de un cuadrado están rectos y forman 90°, su altura coincide exactamente con uno de sus propios lados. Escribe <strong>&quot;Sí&quot;</strong> si has comprendido esto.</p>
+                <Input value={ans3} onChange={e => setAns3(e.target.value)} placeholder="Tu respuesta..." />
               </CardContent>
             </Card>
           </div>
@@ -117,7 +120,7 @@ export default function Station1(props: any) {
                 </h4>
                 <p className="text-slate-700 mb-4">Un triángulo tiene una base de 12 cm. Su altura es exactamente la <strong>mitad</strong> de su base. ¿Cuánto mide su altura?</p>
                 <div className="flex gap-2 items-center">
-                  <Input value={ans4} onChange={e => setAns4(e.target.value)} placeholder="Ej: 5" type="number" className="w-32" />
+                  <Input value={ans4} onChange={e => setAns4(e.target.value)} placeholder="" type="number" className="w-32" />
                   <span className="text-slate-500 font-medium">cm</span>
                 </div>
               </CardContent>

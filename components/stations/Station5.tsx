@@ -99,7 +99,7 @@ export default function Station5(props: any) {
               <>
                 <p className="text-slate-600 mb-4">Calcula el área de un círculo que tiene un <strong>radio de 4 cm</strong>. (Recuerda usar 3,14)</p>
                 <div className="flex gap-2 items-center">
-                  <Input value={ans1} onChange={e => setAns1(e.target.value)} placeholder="50.24" type="number" className="w-32" />
+                  <Input value={ans1} onChange={e => setAns1(e.target.value)} placeholder="" type="number" className="w-32" />
                   <span className="text-slate-500 font-medium">cm²</span>
                 </div>
               </>
@@ -127,7 +127,7 @@ export default function Station5(props: any) {
                   <>
                     <p className="text-slate-600 mb-4">Halla el área de una moneda cuyo radio mide <strong>1,5 cm</strong>.<br/><span className="text-sm text-slate-400">(Recuerda: primero calcula 1,5 × 1,5)</span></p>
                     <div className="flex gap-2 items-center">
-                      <Input value={ans2} onChange={e => setAns2(e.target.value)} placeholder="7.065" type="number" className="w-32" />
+                      <Input value={ans2} onChange={e => setAns2(e.target.value)} placeholder="" type="number" className="w-32" />
                       <span className="text-slate-500 font-medium">cm²</span>
                     </div>
                   </>
@@ -149,7 +149,7 @@ export default function Station5(props: any) {
                   Una rotonda tiene un radio de <strong>10 metros</strong>. ¿Cuál es su área en metros cuadrados? (Usa π = 3,14)
                 </p>
                 <div className="flex gap-2 items-center">
-                  <Input value={ans3} onChange={e => setAns3(e.target.value)} placeholder="Ej: 100" type="number" className="w-32" />
+                  <Input value={ans3} onChange={e => setAns3(e.target.value)} placeholder="" type="number" className="w-32" />
                   <span className="text-slate-500 font-medium">m²</span>
                 </div>
               </CardContent>
@@ -171,7 +171,7 @@ export default function Station5(props: any) {
                   <span className="text-sm opacity-75">Pista 1: Primero divide entre 3.14. Pista 2: Busca un número que multiplicado por sí mismo dé ese resultado.</span>
                 </p>
                 <div className="flex gap-2 items-center">
-                  <Input value={ans4} onChange={e => setAns4(e.target.value)} type="number" className="w-32" placeholder="Ej: 5" />
+                  <Input value={ans4} onChange={e => setAns4(e.target.value)} type="number" className="w-32" placeholder="" />
                   <span className="text-slate-500 font-medium">cm</span>
                 </div>
               </CardContent>

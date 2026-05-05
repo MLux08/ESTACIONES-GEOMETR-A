@@ -174,7 +174,7 @@ export default function Station6(props: any) {
                   <br/><span className="text-sm opacity-75">(Pista: A = (b × h) / 2. Así que 30 = (b × 6) / 2. Dobla el área primero)</span>
                 </p>
                 <div className="flex gap-2 items-center">
-                  <Input value={ans4} onChange={e => setAns4(e.target.value)} type="number" className="w-32" placeholder="Ej: 10" />
+                  <Input value={ans4} onChange={e => setAns4(e.target.value)} type="number" className="w-32" placeholder="" />
                   <span className="text-slate-500 font-medium">cm</span>
                 </div>
               </CardContent>

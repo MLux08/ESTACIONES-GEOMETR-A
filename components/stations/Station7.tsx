@@ -123,7 +123,7 @@ export default function Station7(props: any) {
                       Calcula el área de cada parte y súmalas. (Usa π = 3.14)
                     </p>
                     <div className="flex gap-2 items-center">
-                      <Input value={ans2} onChange={e => setAns2(e.target.value)} type="number" className="w-32" placeholder="22.28" />
+                      <Input value={ans2} onChange={e => setAns2(e.target.value)} type="number" className="w-32" placeholder="" />
                       <span className="text-slate-500 font-medium">cm²</span>
                     </div>
                   </>
@@ -146,7 +146,7 @@ export default function Station7(props: any) {
                   ¿Cuál es el área total de la casa?
                 </p>
                 <div className="flex gap-2 items-center">
-                  <Input value={ansCasa} onChange={e => setAnsCasa(e.target.value)} type="number" className="w-32" placeholder="Ej: 30" />
+                  <Input value={ansCasa} onChange={e => setAnsCasa(e.target.value)} type="number" className="w-32" placeholder="" />
                   <span className="text-slate-500 font-medium">cm²</span>
                 </div>
               </CardContent>

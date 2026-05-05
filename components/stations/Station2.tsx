@@ -68,7 +68,7 @@ export default function Station2(props: any) {
                 <tr className="border-b border-slate-100">
                   <td className="p-3 font-medium text-slate-700">Bote de conserva</td>
                   <td className="p-3">
-                    <Input value={ansBote} onChange={e => setAnsBote(e.target.value)} placeholder="3.14" className="h-9" />
+                    <Input value={ansBote} onChange={e => setAnsBote(e.target.value)} placeholder="" className="h-9" />
                   </td>
                   <td className="p-3 text-center">
                     {cBote && <CheckCircle2 className="w-5 h-5 text-emerald-500 mx-auto" />}
@@ -77,7 +77,7 @@ export default function Station2(props: any) {
                 <tr className="border-b border-slate-100">
                   <td className="p-3 font-medium text-slate-700">Plato circular</td>
                   <td className="p-3">
-                    <Input value={ansPlato} onChange={e => setAnsPlato(e.target.value)} placeholder="3.14" className="h-9" />
+                    <Input value={ansPlato} onChange={e => setAnsPlato(e.target.value)} placeholder="" className="h-9" />
                   </td>
                   <td className="p-3 text-center">
                     {cPlato && <CheckCircle2 className="w-5 h-5 text-emerald-500 mx-auto" />}
@@ -86,7 +86,7 @@ export default function Station2(props: any) {
                 <tr>
                   <td className="p-3 font-medium text-slate-700">Moneda grande</td>
                   <td className="p-3">
-                    <Input value={ansMoneda} onChange={e => setAnsMoneda(e.target.value)} placeholder="3.14" className="h-9" />
+                    <Input value={ansMoneda} onChange={e => setAnsMoneda(e.target.value)} placeholder="" className="h-9" />
                   </td>
                   <td className="p-3 text-center">
                     {cMoneda && <CheckCircle2 className="w-5 h-5 text-emerald-500 mx-auto" />}
@@ -117,7 +117,7 @@ export default function Station2(props: any) {
                 Si una noria gigante de atracciones tiene un diámetro de <strong>10 metros</strong>, ¿cuál es la longitud total del borde por donde giran las cabinas?
               </p>
               <div className="flex gap-2 items-center">
-                <Input value={ansExperto} onChange={e => setAnsExperto(e.target.value)} type="number" className="w-32" placeholder="ej: 31.4" />
+                <Input value={ansExperto} onChange={e => setAnsExperto(e.target.value)} type="number" className="w-32" placeholder="" />
                 <span className="text-slate-500 font-medium">metros</span>
               </div>
             </CardContent>

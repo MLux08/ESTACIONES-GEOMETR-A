@@ -222,7 +222,7 @@ export default function Station4(props: any) {
                   Sabiendo que A = b × h, piensa al revés: ¿cuánto mide su altura?
                 </p>
                 <div className="flex gap-2 items-center">
-                  <Input value={ans5} onChange={e => setAns5(e.target.value)} type="number" className="w-32" placeholder="Ej: 5" />
+                  <Input value={ans5} onChange={e => setAns5(e.target.value)} type="number" className="w-32" placeholder="" />
                   <span className="text-slate-500 font-medium">cm</span>
                 </div>
               </CardContent>
