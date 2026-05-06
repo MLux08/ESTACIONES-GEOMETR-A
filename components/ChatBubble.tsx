@@ -9,7 +9,13 @@ import { cn } from '@/lib/utils';
 import { Button } from './ui/Button';
 
 // Note: To use the Gemini API on the client, the NEXT_PUBLIC_GEMINI_API_KEY environment variable must be set.
-const ai = new GoogleGenAI({ apiKey: process.env.NEXT_PUBLIC_GEMINI_API_KEY });
+let aiConfigured: GoogleGenAI | null = null;
+const getAI = () => {
+  if (!aiConfigured) {
+    aiConfigured = new GoogleGenAI({ apiKey: process.env.NEXT_PUBLIC_GEMINI_API_KEY || 'dummy_key_for_build' });
+  }
+  return aiConfigured;
+};
 
 interface Message {
   role: 'user' | 'model';
@@ -50,7 +56,7 @@ export default function ChatBubble() {
       const formattedHistory = messages.slice(1).map(msg => `${msg.role === 'user' ? 'Alumno' : 'Profesor'}: ${msg.content}`).join('\n');
       const prompt = `Conversación anterior:\n${formattedHistory}\n\nAlumno: ${userMessage}`;
       
-      const response = await ai.models.generateContent({
+      const response = await getAI().models.generateContent({
         model: 'gemini-3.1-pro-preview',
         contents: prompt,
         config: {
